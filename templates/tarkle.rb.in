@@ -1,0 +1,20 @@
+# Copy to Formula/tarkle.rb after `npm publish`, then fill VERSION, SHA256 and the license.
+# SHA256: curl -sL https://registry.npmjs.org/@tarkle/cli/-/cli-VERSION.tgz | shasum -a 256
+class Tarkle < Formula
+  desc "Command line for the Tarkle API"
+  homepage "https://tarkle.com"
+  url "https://registry.npmjs.org/@tarkle/cli/-/cli-VERSION.tgz"
+  sha256 "SHA256"
+  license "LICENSE"
+
+  depends_on "node"
+
+  def install
+    system "npm", "install", *std_npm_args
+    bin.install_symlink Dir["#{libexec}/bin/*"]
+  end
+
+  test do
+    assert_match "command line for the Tarkle API", shell_output("#{bin}/tarkle help")
+  end
+end
