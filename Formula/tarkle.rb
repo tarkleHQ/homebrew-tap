@@ -1,8 +1,8 @@
 class Tarkle < Formula
   desc "Command line for the Tarkle API"
   homepage "https://tarkle.com"
-  url "https://registry.npmjs.org/@tarkle/cli/-/cli-0.2.0.tgz"
-  sha256 "922ce05d1ee53a8a5840df86763fdf9f9e072a3a02f551f5bdb4b2b13b79a276"
+  url "https://registry.npmjs.org/@tarkle/cli/-/cli-0.3.0.tgz"
+  sha256 "eb1243d95455e18274001801f16ee8e6bd873a6676c009c9f086f4dc52802eed"
   license "Apache-2.0"
 
   depends_on "node"
